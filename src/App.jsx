@@ -15,9 +15,6 @@ function App() {
         <div className="header">
         <img src={BgStars} alt="Background Stars" className="bg-stars" />
         </div>
-        <div className="counter-container">
-        <h1> We're launching soon</h1>
-        </div>
         <div className="counter">
           <Counter/>
         </div>
