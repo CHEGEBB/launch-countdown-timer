@@ -19,7 +19,7 @@ body{
             min-width: 100% !important;
             background:linear-gradient(180deg,$Verydarkblue2 40%, $Verydarkblue1 60%);
             .header{
-                
+                width: 100%;
             }
             .footer{
                 // margin-top: -150px;
@@ -41,20 +41,29 @@ body{
             .counter-container{
                 position: relative;
                 z-index: 1000;
-                top:-400px;
-                left: 0;
+                top:-410px;
+                left: 35px;
                 margin: 0 auto;
                 width: 70%;
                 display: flex;
                 align-self: center;
                 justify-content: center;
                 align-items: center;
-                background-color: red;
 
                 h1{
                     color: aliceblue;
                     text-transform: uppercase;
                     letter-spacing: 4px;
+                    font-size: 19px;
+                    font-weight: 700;
+                }
+                .counter-cards{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                    
                 }
             }
            

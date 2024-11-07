@@ -5,6 +5,7 @@ import PatternHills from "./images/pattern-hills.svg"
 import IconFacebook from "./images/icon-facebook.svg"
 import IconInstagram from "./images/icon-instagram.svg"
 import IconPinterest from "./images/icon-pinterest.svg"
+import Counter from './components/counter'
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
         </div>
         <div className="counter-container">
         <h1> We're launching soon</h1>
+        </div>
+        <div className="counter">
+          <Counter/>
         </div>
         <div className="footer">
           <div className="socials">
