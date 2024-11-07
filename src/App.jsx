@@ -20,9 +20,15 @@ function App() {
         </div>
         <div className="footer">
           <div className="socials">
-            <img src={IconFacebook} alt="Facebook" className="icon-facebook" />
-            <img src={IconInstagram} alt="Instagram" className="icon-instagram" />
-            <img src={IconPinterest} alt="Pinterest" className="icon-pinterest" />
+            <div className="facebook">
+              <img src={IconFacebook} alt="Facebook" />
+            </div>
+            <div className="instagram">
+              <img src={IconInstagram} alt="Instagram" />
+              </div>
+            <div className="pinterest">
+              <img src={IconPinterest} alt="Pinterest" />
+              </div>
           </div>
           <img src={PatternHills} alt="Pattern Hills" className="pattern-hills" />
         </div>

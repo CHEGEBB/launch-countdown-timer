@@ -3,29 +3,35 @@
 $font-Red-Hat-Text: 'Red Hat Text', sans-serif;
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:$font-Red-Hat-Text;
+
+body {
+    font-family: $font-Red-Hat-Text;
+
     // overflow-y: hidden;
-    .main-container{
+    .main-container {
         max-height: 100vh;
         width: 100% !important;
-        .container{
+
+        .container {
             width: 100% !important;
             min-width: 100% !important;
-            background:linear-gradient(180deg,$Verydarkblue2 40%, $Verydarkblue1 60%);
-            .header{
+            background: linear-gradient(180deg, $Verydarkblue2 40%, $Verydarkblue1 60%);
+
+            .header {
                 width: 100%;
             }
-            .footer{
+
+            .footer {
                 margin-top: -180px;
                 position: relative;
                 z-index: 1;
-                .socials{
+
+                .socials {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -36,12 +42,24 @@ body{
                     align-items: center;
                     flex-direction: row;
                     gap: 40px;
+
+                    .facebook,
+                    .instagram,
+                    .pinterest {
+                        img {
+                            &:hover {
+                                filter: invert(35%) sepia(54%) saturate(3538%) hue-rotate(306deg) brightness(97%) contrast(91%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
-            .counter-container{
+
+            .counter-container {
                 position: relative;
                 z-index: 1000;
-                top:-410px;
+                top: -410px;
                 left: 35px;
                 margin: 0 auto;
                 width: 70%;
@@ -50,23 +68,40 @@ body{
                 justify-content: center;
                 align-items: center;
 
-                h1{
+                h1 {
                     color: aliceblue;
                     text-transform: uppercase;
                     letter-spacing: 4px;
                     font-size: 19px;
                     font-weight: 700;
                 }
-                .counter-cards{
+
+                .counter-cards {
                     position: absolute;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     z-index: 1000;
-                    
+
                 }
             }
-           
+
+        }
+    }
+
+}
+@media screen and (max-width: 768px) {
+    body {
+        .main-container {
+            .container {
+                min-height: 100vh !important;
+                .footer {
+                    margin-top: 180px;
+                    .socials {
+                        gap: 5px;
+                    }
+                }
+            }
         }
     }
     
