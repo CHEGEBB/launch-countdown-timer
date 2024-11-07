@@ -1,8 +1,15 @@
+@import "./sass/fonts";
+@import "./sass/colors";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family:$font-Red-Hat-Text;
     .main-container{
-        background-color: green;
+        min-height: 100vh;
     }
     
 }
