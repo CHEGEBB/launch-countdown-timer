@@ -144,18 +144,22 @@
   
   @media screen and (max-width: 768px) {
     .counter-container {
-      top: 10px;
-      left: 35px;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        left: -5px !important;
       width: 70%;
   
       h1 {
         font-size: 1.2rem;
         margin-bottom: 2rem;
+        letter-spacing: 0.2rem;
+        text-align: center;
       }
     }
   
     .flip-clock {
-      gap: 0.8rem;
+      gap: 1.5rem !important;
     }
   
     .flip-unit-container {
@@ -165,6 +169,7 @@
       .label {
         font-size: 0.6rem;
         margin-top: 1rem;
+        letter-spacing: 2px !important;
       }
     }
   

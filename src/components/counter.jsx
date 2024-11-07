@@ -1,13 +1,13 @@
 // Counter.jsx
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import '../sass/counter.scss';
 
 function Counter() {
   const [timeLeft, setTimeLeft] = useState({
     days: 8,
     hours: 23,
-    minutes: 59,
-    seconds: 59
+    minutes: 55,
+    seconds: 41
   });
 
   const [flipping, setFlipping] = useState({
