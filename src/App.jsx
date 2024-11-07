@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.scss'
 import BgStars from "./images/bg-stars.svg"
 import PatternHills from "./images/pattern-hills.svg"
