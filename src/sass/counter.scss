@@ -1,65 +1,144 @@
-@import './colors.scss';
-@import './fonts.scss';
-
-@mixin card-styles {
-    background-color: $Darkdesaturatedblue;
-    border-radius: 10px;
-    padding: 20px;
+// counter.scss
+.counter-container {
     display: flex;
-    width: 100px;
-    height: 100px;
-    
-
-    h2 {
-        color: $White;
-        font-size: 40px;
-        font-weight: 700;
-        margin: 0;
-    }
-}
-
-.counter-container2 {
-    position: relative;
-    z-index: 1;
-    top:-410px;
-    left: 35px;
-    margin: 0 auto;
-    width: 70% ;
-    display: flex;
-    align-self: center;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
+    background-color: #1e1f29;
+    min-height: 100vh;
+    padding: 2rem;
+  
     h1 {
-        color: aliceblue;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-size: 19px;
-        font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      margin-bottom: 5rem;
     }
-
-    .cards {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        background-color:green;
-        .day-card {
-            @include card-styles;
-            margin-right: 20px;
-        }
-        .hour-card {
-            @include card-styles;
-            margin-right: 20px;
-        }
-        .minute-card {
-            @include card-styles;
-            margin-right: 20px;
-        }
-        .second-card {
-            @include card-styles;
-        }
-        
+  }
+  
+  .flip-clock {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .flip-unit-container {
+    perspective: 1000px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+  
+    .label {
+      text-align: center;
+      color: #8486a9;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
     }
-}
+  }
+  
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .top-half, .bottom-half, .flip-top {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .top-half {
+    background-color: #2c2c44;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+    &.flip {
+      animation: flip-top 0.6s ease-out;
+      transform-origin: bottom;
+    }
+  }
+  
+  .bottom-half {
+    bottom: 0;
+    background-color: #343650;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .flip-top {
+    background-color: #2c2c44;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    backface-visibility: hidden;
+    
+    &.flip {
+      animation: flip-down 0.6s ease-in;
+    }
+  }
+  
+  .top-number, .bottom-number {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: #fb6087;
+  }
+  
+  .top-number {
+    bottom: 0;
+    transform: translateY(50%);
+  }
+  
+  .bottom-number {
+    top: 0;
+    transform: translateY(-50%);
+  }
+  
+  .hinge {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #1e1f29;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    
+    .hinge-dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #1e1f29;
+      border-radius: 50%;
+      top: -1px;
+      
+      &.left {
+        left: -3px;
+      }
+      
+      &.right {
+        right: -3px;
+      }
+    }
+  }
+  
+  @keyframes flip-top {
+    0% {
+      transform: rotateX(0);
+    }
+    100% {
+      transform: rotateX(-90deg);
+    }
+  }
+  
+  @keyframes flip-down {
+    0% {
+      transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0);
+    }
+  }
