@@ -10,14 +10,22 @@ function App() {
 
   return (
     <div className="main-container">
-      <div className="top-container">
-        <image 
-        src={BgStars}
-        alt="Background Stars"
-        className="bg-stars "
-        />
+      <div className="container">
+        <div className="header">
+        <img src={BgStars} alt="Background Stars" className="bg-stars" />
+        </div>
+        <div className="counter-container">
+        <h1> We're launching soon</h1>
+        </div>
+        <div className="footer">
+          <div className="socials">
+            <img src={IconFacebook} alt="Facebook" className="icon-facebook" />
+            <img src={IconInstagram} alt="Instagram" className="icon-instagram" />
+            <img src={IconPinterest} alt="Pinterest" className="icon-pinterest" />
+          </div>
+          <img src={PatternHills} alt="Pattern Hills" className="pattern-hills" />
+        </div>
       </div>
-      <div className="bottom-container"></div>
     </div>
   )
 }

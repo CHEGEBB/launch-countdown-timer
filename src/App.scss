@@ -1,5 +1,7 @@
-@import "./sass/fonts";
-@import "./sass/colors";
+@import "./sass/fonts.scss";
+@import "./sass/colors.scss";
+$font-Red-Hat-Text: 'Red Hat Text', sans-serif;
+
 
 *{
     margin: 0;
@@ -8,8 +10,52 @@
 }
 body{
     font-family:$font-Red-Hat-Text;
+    // overflow-y: hidden;
     .main-container{
-        min-height: 100vh;
+        max-height: 100vh;
+        width: 100% !important;
+        .container{
+            width: 100% !important;
+            min-width: 100% !important;
+            background:linear-gradient(180deg,$Verydarkblue2 40%, $Verydarkblue1 60%);
+            .header{
+                
+            }
+            .footer{
+                // margin-top: -150px;
+                position: relative;
+                z-index: 1;
+                .socials{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 100;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 40px;
+                }
+            }
+            .counter-container{
+                position: relative;
+                z-index: 1000;
+                top:-400px;
+                left: 0;
+                margin: 0 auto;
+                width: 70%;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                align-items: center;
+                background-color: red;
+                h1{
+                    color: aliceblue;
+                }
+            }
+           
+        }
     }
     
 }
