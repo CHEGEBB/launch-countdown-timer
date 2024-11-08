@@ -1,5 +1,6 @@
 // Counter.jsx
 import  { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '../sass/counter.scss';
 
 function Counter() {
@@ -111,6 +112,11 @@ function Counter() {
       <div className="label">{label}</div>
     </div>
   );
+  FlipCard.propTypes = {
+    number: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    isFlipping: PropTypes.bool.isRequired,
+  };
 
   return (
     <div className="counter-container">
